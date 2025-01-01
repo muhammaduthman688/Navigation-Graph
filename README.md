@@ -44,7 +44,7 @@ Data is passed between fragments using arguments, ensuring smooth communication 
 
 ## **Screenshots**
 
-### **Splash Screen**
+### **Navigation Graph**
 ![Splash Screen](screenshots/image_2025_01_01T06_56_07_843Z.png)
 
 ### **Main Screen**

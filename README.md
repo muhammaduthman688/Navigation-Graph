@@ -41,3 +41,11 @@ Data is passed between fragments using arguments, ensuring smooth communication 
 
 ## *Contact me*
 ![WhatsApp](https://wa.me/923472554151) ![Gmail](mailto:muhammadusman688@gmail.com)
+
+## **Screenshots**
+
+### **Splash Screen**
+![Splash Screen](screenshots/image_2025_01_01T06_56_07_843Z.png)
+
+### **Main Screen**
+![Main Screen](screenshots/image_2025_01_01T06_57_03_262Z.png)

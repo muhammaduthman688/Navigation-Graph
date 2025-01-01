@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentMain"
+        android:label="Home"
+        tools:layout="@layout/fragment_main_fragment" >
+        <action
+            android:id="@+id/action_main_fragment_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_main_fragment_to_viewbalanceFragment"
+            app:destination="@id/viewbalanceFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_main_fragment_to_chooseRecipientFragment"
+            app:destination="@id/chooseRecipientFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentTransaction"
+        android:label="View Transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/viewbalanceFragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentBalance"
+        android:label="View Balance"
+        tools:layout="@layout/fragment_viewbalance" >
+        <action
+            android:id="@+id/action_viewbalanceFragment_to_frag_A"
+            app:destination="@id/frag_A"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/specifyAccountFragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentAccount"
+        android:label="Specify Account"
+        tools:layout="@layout/fragment_specify_account" >
+        <action
+            android:id="@+id/action_specifyAccountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentConfirmation"
+        android:label="Confirmation"
+        tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseRecipientFragment"
+        android:name="com.example.navgraphpractice.ui.fragment.FragmentReceiptSelection"
+        android:label="Recipient Selection"
+        tools:layout="@layout/fragment_choose_recipient" >
+        <action
+            android:id="@+id/action_chooseRecipientFragment_to_specifyAccountFragment"
+            app:destination="@id/specifyAccountFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/frag_A"
+        android:name="com.example.navgraphpractice.Frag_A"
+        android:label="A"
+        tools:layout="@layout/fragment_frag__a" >
+        <action
+
+            android:id="@+id/action_frag_A_to_frag_B"
+            app:destination="@id/frag_B"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/frag_B"
+        android:name="com.example.navgraphpractice.Frag_B"
+        android:label="B"
+        tools:layout="@layout/fragment_frag__b" >
+        <action
+            app:popUpTo="@+id/frag_A"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_frag_B_to_frag_C"
+            app:destination="@id/frag_C"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/frag_C"
+        android:name="com.example.navgraphpractice.Frag_C"
+        android:label="C"
+        tools:layout="@layout/fragment_frag__c" />
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.navgraphpractice.ui.fragment.Splash"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            app:popUpTo="@+id/splash"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splash_to_main_fragment"
+            app:destination="@id/main_fragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+</navigation>

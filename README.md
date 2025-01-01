@@ -1,5 +1,5 @@
-﻿# Navigation-Graph
-# Navigation Graph Example
+
+# Navigation Graph 
 
 This repository demonstrates the implementation of **Android Navigation Component** in a Java-based project. The application showcases navigation with the following key features:
 
